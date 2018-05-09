@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var redis = require("redis");
-var client = redis.createClient();
+var client = redis.createClient(process.env.REDIS_URL);
 
 let geonames = require('./geonames.json');
 
